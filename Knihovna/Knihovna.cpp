@@ -21,18 +21,21 @@ void Knihovna::vypujceniKnihy(int idKnihy, int idZakaznika)
 {
 	Vypujcka* v = new Vypujcka(this->getKnihaByID(idKnihy), this->getZakaznikByID(idZakaznika));
 	this->vypujcky.push_back(v);
+	cout << this->getZakaznikByID(idZakaznika)->udaje() << " si pujcil: " << this->getKnihaByID(idKnihy)->udaje() << endl;
 }
 
 void Knihovna::vypujceniKnihy(Kniha* kniha, Zakaznik* zakaznik)
 {
 	Vypujcka* v = new Vypujcka(kniha, zakaznik);
 	this->vypujcky.push_back(v);
+	cout << zakaznik->udaje() << " si pujcil: " << kniha->udaje() << endl;
 }
 
 void Knihovna::vraceniKnihy(int idKnihy)
 {
 	for (Vypujcka* v : this->vypujcky) {
 		if (v->getKniha() == this->getKnihaByID(idKnihy)) {
+			cout << v->getZakaznik()->udaje() << " vratil: " << v->getKniha()->udaje() << endl;
 			this->vypujcky.erase(find(this->vypujcky.begin(), this->vypujcky.end(), v));
 		}
 	}

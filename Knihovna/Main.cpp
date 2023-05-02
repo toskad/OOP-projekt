@@ -1,6 +1,8 @@
 ﻿#include <iostream>
 #include "Knihovna.h"
 
+int Zanr::pocetObjektu;
+
 int main()
 {
     Knihovna k("testovaci knihovna");
@@ -8,6 +10,9 @@ int main()
     Autor* a2 = new Autor("Jan", "Werich", 15);
     Zanr* z1 = new Zanr("sci-fi");
     Zanr* z2 = new Zanr("komedie");
+
+    cout << "pocet vytvorenych zanru: " << Zanr::GetPocetObjektu() << endl;
+    cout << endl;
 
     k.registraceZakaznika("Jan", "Novak");
     k.registraceZakaznika("Petr", "Zelenka");
@@ -17,8 +22,11 @@ int main()
     k.pridaniKnihy("Vest pocket revue", a2, z2);
 
     k.vypujceniKnihy(0, 1);
+    cout << endl;
     k.vypujceniKnihy(k.getKnihaByID(1), k.getZakaznikByID(1));
+    cout << endl;
     k.vraceniKnihy(1);
+    cout << endl;
 
     k.vypisZakazniku();
     cout << endl;
