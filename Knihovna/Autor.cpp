@@ -5,3 +5,8 @@ Autor::Autor(string jmeno, string prijmeni, int pocetKnih) : Osoba(jmeno, prijme
 	this->pocetKnih = pocetKnih;
 }
 
+string Autor::udaje()
+{
+	return (this->jmeno + " " + this->prijmeni);
+}
+

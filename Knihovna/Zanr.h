@@ -3,6 +3,8 @@
 
 using namespace std;
 
+//trida reprezentuje zanr ktery pote vyuziva trida kniha
+
 class Zanr
 {
 private:

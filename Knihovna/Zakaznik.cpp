@@ -7,5 +7,5 @@ Zakaznik::Zakaznik(string jmeno, string prijmeni, int id) : Osoba(jmeno, prijmen
 
 string Zakaznik::udaje()
 {
-	return (to_string(this->id) + " " + Osoba::udaje());
+	return (to_string(this->id) + " | " + this->jmeno + " " + this->prijmeni);
 }

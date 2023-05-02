@@ -68,7 +68,7 @@ void Knihovna::vypisVypujcek()
 {
 	cout << "Seznam vypujcek:" << endl;
 	for (Vypujcka* v: this->vypujcky) {
-		cout << v->getKniha()->udaje() << " | " << v->getZakaznik()->udaje() << endl;
+		cout << v->getKniha()->udaje() << " -> " << v->getZakaznik()->udaje() << endl;
 	}
 }
 

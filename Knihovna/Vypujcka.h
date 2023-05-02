@@ -2,6 +2,8 @@
 #include "Kniha.h"
 #include "Zakaznik.h"
 
+//trida reprezentuje vypujceni knihy zakaznikem
+
 class Vypujcka
 {
 private:

@@ -2,6 +2,8 @@
 #include <vector>
 #include "Vypujcka.h"
 
+//trida reprezentuje virtualni knihovnu ktera obsahuje knihy, zakazniky a lze si u ni pujcovat knihy
+
 class Knihovna
 {
 private:

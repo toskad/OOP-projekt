@@ -4,6 +4,8 @@
 
 using namespace std;
 
+//abstraktni trida reprezentuje osobu ktera ma jmeno a prijmeni
+ 
 class Osoba
 {
 protected:
@@ -11,6 +13,6 @@ protected:
 	string prijmeni;
 public:
 	Osoba(string jmeno, string prijmeni);
-	string udaje();
+	virtual string udaje() = 0;
 };
 

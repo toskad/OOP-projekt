@@ -20,5 +20,5 @@ Zanr* Kniha::getZanr()
 
 string Kniha::udaje()
 {
-	return (to_string(this->id) + " " + this->nazev + " | " + this->autor->udaje());
+	return (to_string(this->id) + " | " + this->nazev + " | " + this->autor->udaje());
 }
